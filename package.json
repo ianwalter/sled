@@ -1,0 +1,36 @@
+{
+  "name": "@ianwalter/sled",
+  "version": "1.0.0",
+  "description": "A JavaScript micro-library for animating an element's height to create a slide effect",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-serve",
+    "test": "echo \"Error: no test specified\""
+  },
+  "keywords": [
+    "slide",
+    "height",
+    "transition",
+    "toggle",
+    "collapse"
+  ],
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "bootstrap": "^4.1.3",
+    "css-loader": "^1.0.0",
+    "highlight.js": "^9.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "purgecss-webpack-plugin": "^1.2.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-command": "^0.4.1",
+    "webpack-serve": "^2.0.2"
+  }
+}

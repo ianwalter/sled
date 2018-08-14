@@ -1,0 +1,17 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import './dracula.css';
+
+#menu {
+  overflow: hidden;
+  transition: height 0.2s;
+  height: 0;
+}
+
+blockquote.description {
+  background-color: #f4f5f9;
+  border-left: 0.25em solid #dddfe6;
+}
+
+strong {
+  font-weight: 600;
+}

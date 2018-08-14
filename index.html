@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ianwalter/sled</title>
+    <meta name="description" content="A JavaScript micro-library for animating an element's height to create a slide effect.">
+  </head>
+  <body>
+
+    <header>
+      <div class="container py-4">
+
+        <h1>@ianwalter/sled</h1>
+
+        <blockquote class="description p-3">
+          A JavaScript micro-library for animating an element's height to create
+          a slide effect.
+        </blockquote>
+
+        <a href="https://github.com/ianwalter/sled">
+          <img
+            src="https://img.shields.io/github/stars/ianwalter/dotfiles.svg?style=plastic&label=GitHub"
+            alt="GitHub">
+        </a>
+
+      </div>
+    </header>
+
+    <main>
+
+      <section class="pt-3 pb-2 container">
+
+        <h2>About</h2>
+
+        <p>
+          I created Sled because I wanted to use
+          <a href="https://getbootstrap.com">Bootstrap's</a>
+          collapsible navbar menu without having to import a bunch of
+          unnecessary code. Sled is 20 lines of code, 1235 bytes (595 gzipped),
+          and has no dependencies.
+        </p>
+
+      </section>
+
+      <section id="demo" class="pt-3 pb-4 container">
+
+        <h2>Demo</h2>
+
+        <p>
+          Click the button below to toggle between sliding the menu down and
+          up.
+        </p>
+
+        <button id="toggleButton" class="btn btn-primary dropdown-toggle">
+          Toggle Menu
+        </button>
+
+        <div id="menu" class="collapse show">
+          <div class="card mt-3 mb-2">
+            <div class="list-group list-group-flush">
+
+              <a
+                href="https://iankwalter.com"
+                class="list-group-item list-group-item-action">
+                Ian's Website
+              </a>
+
+              <a
+                href="https://appjumpstart.com"
+                class="list-group-item list-group-item-action">
+                AppJumpstart
+              </a>
+
+              <a
+                href="https://binx.health"
+                class="list-group-item list-group-item-action">
+                Binx Health
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="pt-3 pb-2">
+
+        <div class="container pb-3">
+          <h2>Installation</h2>
+        </div>
+
+        <pre>
+          <code class="console container">
+npm install @ianwalter/sled --save
+          </code>
+        </pre>
+
+      </section>
+
+      <section class="pt-3">
+
+        <div class="container">
+
+          <h2 class="pb-3">Usage</h2>
+
+          <strong class="text-secondary">
+            Vanilla JavaScript example:
+          </strong>
+
+        </div>
+
+        <pre class="my-3">
+          <code class="javascript container">
+import Sled from '@ianwalter/sled'
+const sled = new Sled(document.querySelector('#myEl'))
+
+// Slide to a specific height:
+sled.slide('100px')
+
+// Toggle between 0 height and the elements natural height.
+sled.toggle()
+          </code>
+        </pre>
+
+        <div class="container py-2">
+          <strong class="text-secondary">Vue.js example:</strong>
+        </div>
+
+        <pre class="my-3">
+          <code class="javascript container">
+import Sled from '@ianwalter/sled'
+
+let sled
+
+export default {
+  mounted () {
+    sled = new Sled(this.$refs.menu)
+  },
+  methods: {
+    toggleMenu: () => sled.toggle()
+  }
+}
+          </code>
+        </pre>
+
+      </section>
+
+    </main>
+
+    <footer class="container py-5">
+      <strong class="text-secondary">
+        ISC &copy; <a href="https://iankwalter.com">Ian Walter</a>
+      </strong>
+    </footer>
+
+  </body>
+</html>
