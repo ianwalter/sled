@@ -3,7 +3,7 @@ export default class Sled {
     this.el = el
   }
 
-  slide (height) {
+  slide (height = '') {
     this.el.style.height = height
   }
 
@@ -11,7 +11,7 @@ export default class Sled {
     const beganOpen = typeof this.isOpen === 'undefined' && this.el.clientHeight
     if (this.isOpen || beganOpen) {
       this.isOpen = false
-      this.slide('0')
+      this.slide()
     } else {
       this.isOpen = true
       this.slide(this.el.scrollHeight + 'px')
