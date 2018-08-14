@@ -1,4 +1,4 @@
-# sled
+# @ianwalter/sled
 > A JavaScript micro-library for animating an element's height to create
 > a slide effect
 
