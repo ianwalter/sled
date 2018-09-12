@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/sled",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A JavaScript micro-library for animating an element's height to create a slide effect",
   "main": "dist/sled.js",
   "umd:main": "dist/sled.umd.js",
