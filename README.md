@@ -6,7 +6,7 @@
 
 I created Sled because I wanted to use [Bootstrap's](https://getbootstrap.com)
 collapsible navbar menu without having to import a bunch of unnecessary code.
-Sled is 20 lines of code, 1235 bytes (595 gzipped), and has no dependencies.
+Sled is 20 lines of code, 182 bytes, and has no dependencies.
 
 ## Demo
 

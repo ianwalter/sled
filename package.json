@@ -2,10 +2,12 @@
   "name": "@ianwalter/sled",
   "version": "1.0.1",
   "description": "A JavaScript micro-library for animating an element's height to create a slide effect",
-  "main": "dist/index.js",
-  "module": "index.js",
+  "main": "dist/sled.js",
+  "umd:main": "dist/sled.umd.js",
+  "module": "dist/sled.m.js",
   "scripts": {
-    "build": "webpack",
+    "build": "microbundle build index.js",
+    "watch": "microbundle watch index.js",
     "start": "webpack-serve",
     "test": "echo \"Error: no test specified\""
   },
@@ -28,6 +30,7 @@
     "css-loader": "^1.0.0",
     "highlight.js": "^9.10.0",
     "html-webpack-plugin": "^3.2.0",
+    "microbundle": "^0.6.0",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^3.0.0",
