@@ -21,8 +21,7 @@
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "ISC",
   "files": [
-    "index.js",
-    "dist/index.js"
+    "dist"
   ],
   "devDependencies": {
     "autoprefixer": "^9.1.1",
