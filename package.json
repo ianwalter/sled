@@ -38,5 +38,13 @@
     "webpack": "^4.16.5",
     "webpack-command": "^0.4.1",
     "webpack-serve": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/sled.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianwalter/sled/issues"
+  },
+  "homepage": "https://github.com/ianwalter/sled#readme"
 }
