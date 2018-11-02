@@ -9221,9 +9221,9 @@ wcwidth@^1.0.1:
     defaults "^1.0.3"
 
 webpack-command@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/webpack-command/-/webpack-command-0.4.1.tgz#3f88aae87c28292ed0a97293615a2e962a1c66f4"
-  integrity sha512-4u23PTUcjLJCcPqs53ugjFIp2c3I6rGZgYYwgD7LPPU745MzbS3tLXuOpKdgFNN+qDdWtzfLKZhMTQyf7jklcg==
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/webpack-command/-/webpack-command-0.4.2.tgz#f6b4fdec004692e12413b33a9a251eb665edb020"
+  integrity sha512-2JZRlV+eT2nsw0DGDS/F4ndv0e/QVkyYj4/1fagp9DbjRagQ02zuVzELp/QF5mrCESKKvnXiBQoaBJUOjAMp8w==
   dependencies:
     "@webpack-contrib/config-loader" "^1.2.0"
     "@webpack-contrib/schema-utils" "^1.0.0-beta.0"
