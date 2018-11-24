@@ -1,29 +1,28 @@
 const { join } = require('path')
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
-const mode = process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
-const path = join(__dirname, 'public')
+const isProduction = process.env.NODE_ENV === 'production'
+const site = join(__dirname, 'site')
+const cssProcessorOptions = { discardComments: { removeAll: true } }
 
-module.exports = {
-  mode,
-  entry: './demo.js',
+module.exports = (env = {}) => ({
+  mode: isProduction ? 'production' : 'development',
+  entry: join(site, 'main.js'),
   output: {
-    path,
-    filename: 'demo.js'
+    path: join(site, 'dist'),
+    filename: 'js/[name].[chunkhash].js'
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
-    ...(mode === 'production' ? [
-      new PurgecssPlugin({ paths: ['./index.html'] }),
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: {
-          discardComments: { removeAll: true }
-        }
-      }),
+    ...(env.singleRun ? [
+      new CleanWebpackPlugin(['site/dist'])
+    ] : []),
+    new HtmlWebpackPlugin({ template: './site/index.html' }),
+    ...(isProduction ? [
+      new OptimizeCssAssetsPlugin({ cssProcessorOptions }),
       new MiniCssExtractPlugin()
     ] : [])
   ],
@@ -32,19 +31,25 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          mode === 'development'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 }
-          },
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           {
             loader: 'postcss-loader',
             options: { plugins: [require('autoprefixer')()] }
-          }
-        ],
+          },
+          ...(isProduction ? [
+            {
+              loader: '@fullhuman/purgecss-loader',
+              options: {
+                content: ['./index.html'],
+                whitelistPatterns: [
+                  /hljs/
+                ]
+              }
+            }
+          ] : [])
+        ]
       }
     ]
   }
-}
+})

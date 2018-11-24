@@ -1,7 +1,7 @@
 import hljs from 'highlight.js/lib/highlight'
 import javascript from 'highlight.js/lib/languages/javascript'
-import './demo.css'
-import Slide from './'
+import './main.css'
+import Slide from '../'
 
 //
 hljs.registerLanguage('javascript', javascript)
