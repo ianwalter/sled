@@ -2,15 +2,18 @@
 > A JavaScript micro-library for animating an element's height to create
 > a slide effect
 
+[![npm page][npmImage]][npmUrl]
+[![build status][buildImage]][buildUrl]
+
 ## About
 
-I created Sled because I wanted to use [Bootstrap's](https://getbootstrap.com)
+I created Sled because I wanted to use [Bootstrap's][boostrapUrl]
 collapsible navbar menu without having to import a bunch of unnecessary code.
 Sled is 20 lines of code, 182 bytes, and has no dependencies.
 
 ## Demo
 
-[Click here]() to see the demo.
+[Click here][demoUrl] to see the demo.
 
 ## Installation
 
@@ -58,6 +61,12 @@ Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
 
 Created by [Ian Walter](https://iankwalter.com)
 
+[bootstrapUrl]: https://getbootstrap.com
+[demoUrl]: https://sled.iankwalter.com
+[npmImage]: https://img.shields.io/npm/v/@ianwalter/sled.svg
+[npmUrl]: https://www.npmjs.com/package/@ianwalter/sled
+[buildImage]: https://dev.azure.com/ianwalter/sled/_apis/build/status/ianwalter.sled
+[buildUrl]: https://dev.azure.com/ianwalter/sled/_build
 [licenseUrl]: https://github.com/ianwalter/sled/blob/master/LICENSE
 
 
