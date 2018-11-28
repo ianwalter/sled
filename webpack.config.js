@@ -8,6 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 const site = join(__dirname, 'site')
 const cssProcessorOptions = { discardComments: { removeAll: true } }
+const cssLoaderOptions = { importLoaders: isProduction ? 2 : 1 }
 
 module.exports = (env = {}) => ({
   mode: isProduction ? 'production' : 'development',
@@ -23,7 +24,7 @@ module.exports = (env = {}) => ({
     new HtmlWebpackPlugin({ template: './site/index.html' }),
     ...(isProduction ? [
       new OptimizeCssAssetsPlugin({ cssProcessorOptions }),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin({ filename: 'css/[name].[hash].css' })
     ] : [])
   ],
   module: {
@@ -32,7 +33,7 @@ module.exports = (env = {}) => ({
         test: /\.css$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: cssLoaderOptions },
           {
             loader: 'postcss-loader',
             options: { plugins: [require('autoprefixer')()] }
@@ -41,7 +42,7 @@ module.exports = (env = {}) => ({
             {
               loader: '@fullhuman/purgecss-loader',
               options: {
-                content: ['./index.html'],
+                content: [join(site, 'index.html')],
                 whitelistPatterns: [
                   /hljs/
                 ]
