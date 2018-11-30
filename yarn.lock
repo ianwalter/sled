@@ -111,6 +111,11 @@
     loader-utils "^1.1.0"
     purgecss "^1.1.0"
 
+"@ianwalter/dracula@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/dracula/-/dracula-1.0.0.tgz#4bac4cbf8fe2572cdc9b4a2cc1f07cd0952ab672"
+  integrity sha512-IpxM6/lfKmUbKQ4/KcmPolS+fS+HUAOchb6jUGKp+4QqQlnjdCKpMHL+ZqnItNq9CSUshIIP2JfsvheqCUSOPQ==
+
 "@types/estree@0.0.39":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
