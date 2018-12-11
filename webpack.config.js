@@ -38,9 +38,9 @@ module.exports = (env = {}) => ({
             {
               loader: '@fullhuman/purgecss-loader',
               options: {
-                content: [join(site, 'index.html')],
-                whitelistPatterns: [
-                  /hljs/
+                content: [join(site, 'dist/index.html')],
+                whitelistPatternsChildren: [
+                  /^pre/
                 ]
               }
             }
