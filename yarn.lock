@@ -288,13 +288,47 @@
   integrity sha512-iT2RvdsAU1elxzXZH2barcpc1tpEUfCYCmKUsc+2cfB37lugc0MHTqhlLngazwicYC4p4RyKYazzuRDSnLVhXw==
 
 "@ianwalter/prism-loader@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@ianwalter/prism-loader/-/prism-loader-1.1.0.tgz#085b49e3647d05b097825d983d2b4af1706c4d88"
-  integrity sha512-OKiP8GfVc2tn/2K6breabNgymvSvEHHwuhU4HIrYkcvjw8pH3PIWdvJjx2jyhlddm4n7YbgpGHz0E6CIZ9ANhw==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/prism-loader/-/prism-loader-1.2.0.tgz#09b2d019c8d1d39c95ada1a74c3bc71040bf26ba"
+  integrity sha512-KQy44LC1XWyRVPfiajOvxmN4d6DzJd8DUJH781A/8of1e88NTQpU8BD73dNR8Mfk5AItRbUiBQn9r7/mv+38HQ==
   dependencies:
+    "@starptech/rehype-webparser" "^0.8.10"
+    hast-util-to-html "^5.0.0"
     prismjs "^1.15.0"
-    rehype "^7.0.0"
     rehype-prism "^0.0.2"
+    unified "^7.0.2"
+
+"@starptech/hast-util-from-webparser@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@starptech/hast-util-from-webparser/-/hast-util-from-webparser-0.8.10.tgz#0f958f9b3c662ff5dad809bb30e77440a2878bde"
+  integrity sha512-vh2Z+QVluP2OAIHGjkRgibuy3i6IE9LDTXzfUcGu1OKmY7KWgaVEhfsVaBqOXqhV8IU2YWdgEg77xc8gSGHV3A==
+  dependencies:
+    "@starptech/prettyhtml-hastscript" "^0.8.10"
+    "@starptech/webparser" "^0.8.10"
+    property-information "^5.0.1"
+
+"@starptech/prettyhtml-hastscript@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@starptech/prettyhtml-hastscript/-/prettyhtml-hastscript-0.8.10.tgz#39f85e77cda07bb24482e66086f0fbaafd8bbcfb"
+  integrity sha512-p7dSSPRt/b2u80X+seuQfUCboXWr02HOeVXarQK2zzkAwZydMbC+h/N5Q0UZaOOlmIoJAghs8s+mKViPnbNUbw==
+  dependencies:
+    comma-separated-tokens "^1.0.5"
+    hast-util-parse-selector "^2.2.0"
+    property-information "^5.0.1"
+    space-separated-tokens "^1.1.2"
+
+"@starptech/rehype-webparser@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@starptech/rehype-webparser/-/rehype-webparser-0.8.10.tgz#74973f994b2b24a9c44075880c053598b6229e17"
+  integrity sha512-EdItrDaPL2NqEG7yFDOD+tj2EMFYKD2m41Grs5QLWq3jNKRMOXLCpWMjLe8akm0DpDPGMg+iYQC2LN3ynIkiHA==
+  dependencies:
+    "@starptech/hast-util-from-webparser" "^0.8.10"
+    "@starptech/webparser" "^0.8.10"
+
+"@starptech/webparser@^0.8.10":
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/@starptech/webparser/-/webparser-0.8.10.tgz#2bb6f362e93d8731beb4676c2f46d6100406f46f"
+  integrity sha512-6dGJKF/ZFJSuSL200CTZIvCRqgIwkq3Ye0h83XksbuELC1G/eg520Es8ZxfE+N/oe5JYmOM3iLEt1yXKTYFpFQ==
 
 "@types/estree@0.0.39":
   version "0.0.39"
@@ -2390,7 +2424,7 @@ combined-stream@^1.0.5, combined-stream@^1.0.6, combined-stream@~1.0.5, combined
   dependencies:
     delayed-stream "~1.0.0"
 
-comma-separated-tokens@^1.0.0, comma-separated-tokens@^1.0.1:
+comma-separated-tokens@^1.0.0, comma-separated-tokens@^1.0.1, comma-separated-tokens@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.5.tgz#b13793131d9ea2d2431cf5b507ddec258f0ce0db"
   integrity sha512-Cg90/fcK93n0ecgYTAz1jaA3zvnQ0ExlmKY1rdbyHqAx6BHxwoJc+J7HDu0iuQ7ixEs1qaa+WyQ6oeuBpYP1iA==
@@ -8330,23 +8364,6 @@ rehype-prism@^0.0.2:
     unist-util-modify-children "^1.1.3"
     unist-util-visit "^1.4.0"
 
-rehype-stringify@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-5.0.0.tgz#f66780704824ed31b8945ac1b19093a5dab0efd3"
-  integrity sha512-uQVzP/eLMM6kdM5Myo0mt5rrb5ntCAxFGNobtzMTTdL1+hqc6WNVxB9uwZyckm54qz/0SnDkzgvCV0/AZy4wCw==
-  dependencies:
-    hast-util-to-html "^5.0.0"
-    xtend "^4.0.1"
-
-rehype@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/rehype/-/rehype-7.0.0.tgz#23a0134d341de8b693c02a0fedf96498f5c82b61"
-  integrity sha512-+D+LpHtbA32tzbEW1G9vafZkegKSE+/ij49P+jF64lyJgROO3s8qihpSNdsqJVDxIuhJ0pQcHBhqZoZ3ATtMbQ==
-  dependencies:
-    rehype-parse "^6.0.0"
-    rehype-stringify "^5.0.0"
-    unified "^7.0.0"
-
 relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
@@ -9150,7 +9167,7 @@ sourcemap-codec@^1.4.1:
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.3.tgz#0ba615b73ec35112f63c2f2d9e7c3f87282b0e33"
   integrity sha512-vFrY/x/NdsD7Yc8mpTJXuao9S8lq08Z/kOITHz6b7YbfI9xL8Spe5EvSQUHOI7SbpY8bRPr0U3kKSsPuqEGSfA==
 
-space-separated-tokens@^1.0.0:
+space-separated-tokens@^1.0.0, space-separated-tokens@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.2.tgz#e95ab9d19ae841e200808cd96bc7bd0adbbb3412"
   integrity sha512-G3jprCEw+xFEs0ORweLmblJ3XLymGGr6hxZYTYZjIlvDti9vOBUjRQa1Rzjt012aRrocKstHwdNi+F7HguPsEA==
@@ -9805,7 +9822,7 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.4.tgz#5a533f31b4317ea76f17d807fa0d116546111dd0"
   integrity sha512-2WSLa6OdYd2ng8oqiGIWnJqyFArvhn+5vgx5GTxMbUYjCYKUcuKS62YLFF0R/BDGlB1yzXjQOLtPAfHsgirEpg==
 
-unified@^7.0.0:
+unified@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/unified/-/unified-7.0.2.tgz#16aa2748a7c936b80846cc69c580cd5ebd844532"
   integrity sha512-H7HiczCdNcPrqy4meJPtlJSch9+hm6GXLQ9FFLOUiFI1DIUbjvBhMKJtQ7YCaBhEPVXZwwqNyiot9xBUEtmlbg==
