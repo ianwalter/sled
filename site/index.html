@@ -106,10 +106,9 @@
           <h2>Installation</h2>
         </div>
 
-        <pre>
-          <code class="container d-block">npm install @ianwalter/sled --save
-
-</code></pre>
+        <pre><!--
+       --><code class="container d-block py-4">yarn add @ianwalter/sled</code><!--
+     --></pre>
 
       </section>
 
@@ -125,17 +124,19 @@
 
         </div>
 
-        <pre class="my-3">
-          <code class="language-javascript container d-block">import Sled from '@ianwalter/sled'
-const sled = new Sled(document.querySelector('#myEl'))
+        <pre class="my-3"><!--
+       --><code class="language-javascript container d-block py-4"><!--
+         -->import Sled from '@ianwalter/sled'
+<!--     -->const sled = new Sled(document.querySelector('#myEl'))
 
-// Slide to a specific height:
-sled.slide('100px')
+<!--     -->// Slide to a specific height:
+<!--     -->sled.slide('100px')
 
-// Toggle between 0 height and the elements natural height.
-sled.toggle()
+<!--     -->// Toggle between 0 height and the elements natural height.
+<!--     -->sled.toggle()<!--
 
-</code></pre>
+       --></code><!--
+     --></pre>
 
         <div class="container py-2">
           <strong class="text-secondary">Vue.js example:</strong>
