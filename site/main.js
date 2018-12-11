@@ -1,14 +1,5 @@
-import hljs from 'highlight.js/lib/highlight'
-import javascript from 'highlight.js/lib/languages/javascript'
 import './main.css'
 import Slide from '../'
-
-//
-hljs.registerLanguage('javascript', javascript)
-document.querySelectorAll('code').forEach(el => {
-  el.innerHTML = el.innerHTML.trimRight()
-  hljs.highlightBlock(el)
-})
 
 // Extract the toggle method from a new Slide instance for the menu element.
 const slide = new Slide(document.querySelector('#menu'))

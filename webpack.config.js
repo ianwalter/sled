@@ -46,6 +46,11 @@ module.exports = (env = {}) => ({
             }
           ] : [])
         ]
+      },
+      {
+        test: /\.html$/,
+        include: site,
+        use: ['html-loader', '@ianwalter/prism-loader']
       }
     ]
   }
