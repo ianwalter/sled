@@ -3,7 +3,6 @@
 > a slide effect
 
 [![npm page][npmImage]][npmUrl]
-[![build status][buildImage]][buildUrl]
 
 ## About
 
@@ -65,8 +64,6 @@ Created by [Ian Walter](https://iankwalter.com)
 [demoUrl]: https://sled.iankwalter.com
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/sled.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/sled
-[buildImage]: https://dev.azure.com/ianwalter/sled/_apis/build/status/ianwalter.sled
-[buildUrl]: https://dev.azure.com/ianwalter/sled/_build
 [licenseUrl]: https://github.com/ianwalter/sled/blob/master/LICENSE
 
 
