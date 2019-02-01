@@ -62,6 +62,9 @@
     "extends": [
       "eslint:recommended",
       "standard"
-    ]
+    ],
+    "globals": {
+      "Sled": true
+    }
   }
 }
