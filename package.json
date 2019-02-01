@@ -9,7 +9,7 @@
     "start": "webpack-dev-server",
     "lint": "eslint index.js test.js",
     "build:site": "NODE_ENV=production webpack --env.singleRun",
-    "pretest": "dist",
+    "pretest": "dist --name Sled",
     "test": "ava"
   },
   "keywords": [
