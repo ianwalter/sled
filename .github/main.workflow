@@ -1,6 +1,6 @@
 workflow "CI" {
   on = "push"
-  resolves = ["Lint"] # TODO: Add back Test once GA supports Puppeteer.
+  resolves = ["Lint", "Build Site"] # TODO: Add back Test once GA supports Puppeteer.
 }
 
 action "Install" {
@@ -20,4 +20,11 @@ action "Test" {
   needs = ["Install"]
   runs = "yarn"
   args = "test"
+}
+
+action "Build Site" {
+  uses = "docker://node:11-alpine"
+  needs = ["Install"]
+  runs = "yarn"
+  args = "build:site"
 }

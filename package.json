@@ -31,6 +31,7 @@
     "@ianwalter/prism-loader": "^1.1.0",
     "@ianwalter/puppeteer-helper": "^1.0.0",
     "ava": "^1.2.0",
+    "bootstrap": "^4.2.1",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.0.0",
     "eslint": "^5.7.0",
