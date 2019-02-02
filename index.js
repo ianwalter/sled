@@ -7,9 +7,12 @@ export default class Sled {
     this.el.style.height = height
   }
 
+  beganOpen () {
+    return typeof this.isOpen === 'undefined' && this.el.clientHeight
+  }
+
   toggle () {
-    const beganOpen = typeof this.isOpen === 'undefined' && this.el.clientHeight
-    if (this.isOpen || beganOpen) {
+    if (this.isOpen || this.beganOpen()) {
       this.isOpen = false
       this.slide('0px')
     } else {
