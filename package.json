@@ -9,7 +9,9 @@
     "start": "webpack-dev-server",
     "lint": "eslint index.js test.js",
     "build:site": "NODE_ENV=production webpack --env.singleRun",
-    "pretest": "dist --name Sled",
+    "dist": "dist --babel --no-iife",
+    "iife": "dist --name Sled --babel --inline --no-cjs --no-esm",
+    "pretest": "npm run dist && npm run iife",
     "test": "ava"
   },
   "keywords": [
@@ -21,12 +23,25 @@
   ],
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/sled.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianwalter/sled/issues"
+  },
+  "homepage": "https://sled.iankwalter.com",
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@babel/runtime": "^7.3.1"
+  },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
     "@fullhuman/purgecss-loader": "^1.0.0",
-    "@ianwalter/dist": "^1.5.0-1",
+    "@ianwalter/dist": "^1.5.1",
     "@ianwalter/dracula": "^2.0.0",
     "@ianwalter/prism-loader": "^1.1.0",
     "@ianwalter/puppeteer-helper": "^1.0.0",
@@ -49,14 +64,17 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ianwalter/sled.git"
+  "browserslist": [
+    "> 0.5%"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/ianwalter/sled/issues"
-  },
-  "homepage": "https://sled.iankwalter.com",
   "eslintConfig": {
     "root": true,
     "extends": [
