@@ -6,7 +6,7 @@
   "browser": "dist/sled.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "lint": "eslint index.js test.js",
+    "lint": "eslint index.js test",
     "build:site": "NODE_ENV=production webpack --env.singleRun",
     "pretest": "dist --babel --no-cjs",
     "test": "ava"
