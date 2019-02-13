@@ -782,6 +782,14 @@
     loader-utils "^1.1.0"
     purgecss "^1.1.0"
 
+"@ianwalter/babel-preset-lib@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/babel-preset-lib/-/babel-preset-lib-1.1.0.tgz#c4bc0cfdcfdb7b5864e66f5887c39d07e4895af4"
+  integrity sha512-Ztq7U+WhBq4QFZxRZkT9FELjrsAXJLdPVDN9j+88YEc8T9rl7UfJ3Gd4qEk9kWlCU1dnRmZDcyUFVYix4GZhlg==
+  dependencies:
+    "@babel/plugin-transform-runtime" "^7.2.0"
+    "@babel/preset-env" "^7.3.1"
+
 "@ianwalter/dist@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@ianwalter/dist/-/dist-2.0.0.tgz#21b663fbbd83b08aea9af6261f5a6dcd644de3ff"
