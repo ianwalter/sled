@@ -43,7 +43,7 @@
     "@ianwalter/puppeteer-helper": "^4.0.0",
     "ava": "^1.2.0",
     "bootstrap": "^4.2.1",
-    "clean-webpack-plugin": "^1.0.0",
+    "clean-webpack-plugin": "^2.0.0",
     "css-loader": "^2.0.0",
     "eslint": "^5.7.0",
     "eslint-config-standard": "^12.0.0",
