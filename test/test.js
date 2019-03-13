@@ -22,3 +22,8 @@ test('toggle when padding and began open', withPage, async t => t.is(
   await t.evaluate('./test/helpers/toggleWithPadding.js'),
   40
 ))
+
+test('open and close', withPage, async t => t.deepEqual(
+  await t.evaluate('./test/helpers/openClose.js'),
+  [35, 0]
+))

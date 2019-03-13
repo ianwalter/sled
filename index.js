@@ -8,13 +8,21 @@ export default class Sled {
     this.el.style.height = height
   }
 
+  open () {
+    this.isOpen = true
+    this.slide()
+  }
+
+  close () {
+    this.isOpen = false
+    this.slide('0px')
+  }
+
   toggle () {
     if (this.isOpen) {
-      this.isOpen = false
-      this.slide('0px')
+      this.close()
     } else {
-      this.isOpen = true
-      this.slide()
+      this.open()
     }
   }
 }
