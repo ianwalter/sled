@@ -52,6 +52,11 @@ export default {
 }
 ```
 
+## Related
+
+* [`@ianwalter/power-sled`][powerSledUrl] - A JavaScript micro-library for
+adding dropdown menu functionality to elements
+
 ## License
 
 Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
@@ -64,6 +69,7 @@ Created by [Ian Walter](https://iankwalter.com)
 [demoUrl]: https://sled.iankwalter.com
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/sled.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/sled
+[powerSledUrl]: https://github.com/ianwalter/power-sled
 [licenseUrl]: https://github.com/ianwalter/sled/blob/master/LICENSE
 
 

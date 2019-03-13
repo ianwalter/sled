@@ -19,7 +19,7 @@ module.exports = (env = {}) => ({
   },
   plugins: [
     ...(env.singleRun ? [
-      new CleanWebpackPlugin(['site/dist'])
+      new CleanWebpackPlugin()
     ] : []),
     new HtmlWebpackPlugin({ template: './site/index.html' }),
     ...(isProduction ? [

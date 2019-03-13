@@ -1,18 +1,15 @@
 export default class Sled {
-  constructor (el) {
+  constructor (el, isOpen) {
     this.el = el
+    this.isOpen = isOpen || (el && el.clientHeight)
   }
 
   slide (height = this.el.scrollHeight + 'px') {
     this.el.style.height = height
   }
 
-  beganOpen () {
-    return typeof this.isOpen === 'undefined' && this.el.clientHeight
-  }
-
   toggle () {
-    if (this.isOpen || this.beganOpen()) {
+    if (this.isOpen) {
       this.isOpen = false
       this.slide('0px')
     } else {
