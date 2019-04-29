@@ -32,7 +32,7 @@
     "dist"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.3.1"
+    "@babel/runtime-corejs3": "^7.4.4"
   },
   "devDependencies": {
     "@fullhuman/purgecss-loader": "^1.0.0",
@@ -42,6 +42,7 @@
     "@ianwalter/eslint-config": "^1.0.0",
     "@ianwalter/prism-loader": "^1.1.0",
     "@ianwalter/puppeteer-helper": "^4.0.0",
+    "@ianwalter/renovate-config": "^1.1.0",
     "ava": "^1.2.0",
     "bootstrap": "^4.2.1",
     "clean-webpack-plugin": "^2.0.0",
@@ -56,9 +57,7 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
-  "browserslist": [
-    "> 0.5%"
-  ],
+  "browserslist": "> 2%, not dead",
   "babel": {
     "presets": [
       "@ianwalter/lib"
@@ -67,7 +66,12 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@ianwalter/eslint-config"
+      "@ianwalter"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@ianwalter"
     ]
   }
 }
