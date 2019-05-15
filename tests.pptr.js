@@ -1,5 +1,5 @@
 import { test } from '@ianwalter/bff'
-import Sled from '../..'
+import Sled from '.'
 
 function createParagraph () {
   const p = document.createElement('p')
