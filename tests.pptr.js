@@ -1,4 +1,4 @@
-import { test } from '@ianwalter/bff'
+import { test } from '@ianwalter/bff-puppeteer'
 import Sled from '.'
 
 function createParagraph () {

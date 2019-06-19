@@ -877,24 +877,34 @@
     "@babel/plugin-transform-runtime" "^7.4.4"
     "@babel/preset-env" "^7.4.4"
 
-"@ianwalter/bff@^5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-5.2.1.tgz#7f3ffe44e041549e89a261f191d2c06a37520997"
-  integrity sha512-3ou9CePCfAiO08BolpeBsMeW6PogeN8vvNRghz5WmLYs169TUrKAj7vEt0wEx5ubBEQPQ0PRqOVLZ3Iy2uifUw==
+"@ianwalter/bff-puppeteer@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/bff-puppeteer/-/bff-puppeteer-1.0.0.tgz#20de7ea7ec08d67d718fea415deeecf630609726"
+  integrity sha512-36sM5R4CKGnSYjrhAYn3F8xnoUMfj5JH3f/+YvqluNy8aThn+b30lFQSZG4ArlZAOg1nLH2cRPRLL07tbbGBAA==
+  dependencies:
+    "@ianwalter/bff" "^6.0.1"
+    "@ianwalter/merge" "^4.0.0"
+    "@ianwalter/print" "^2.3.1"
+    common-tags "^1.8.0"
+    fs-remote "^0.1.9"
+    puppeteer "^1.17.0"
+    tempy "^0.3.0"
+    webpack "^4.34.0"
+
+"@ianwalter/bff@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-6.0.1.tgz#e175adb7efc78b4aeb5444779b586fe38e391992"
+  integrity sha512-FwTZZweGOTa0loNv/th/Jz2UoUuoT71XeWYTbiP1nJjkX1imOdGhiAERjvGLkg7qTE24AcKrmRUZJmLrQMEKnQ==
   dependencies:
     "@ianwalter/cli" "^1.1.1"
     "@ianwalter/print" "^2.3.1"
     common-tags "^1.8.0"
     expect "^24.8.0"
-    fs-remote "^0.1.9"
     globby "^9.2.0"
     jest-snapshot "^24.8.0"
     junit-report-builder "^1.3.2"
     p-series "^2.1.0"
     p-timeout "^3.1.0"
-    puppeteer "^1.17.0"
-    tempy "^0.3.0"
-    webpack "^4.33.0"
     workerpool "^3.1.2"
 
 "@ianwalter/cli@^1.1.1":
@@ -965,6 +975,13 @@
   integrity sha512-SrJt5zo4BjRHKQ6U0ErJlVgXQA2HLYRL1nGd8Vti84rbztwrsmwhxKUSsOHQWEY7/8MqlR2O22oDPJdLnIQ9RQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
+
+"@ianwalter/merge@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/merge/-/merge-4.0.0.tgz#3b7fc3dbe11524f28329ad86c41137b5cc47b549"
+  integrity sha512-ne2wO/KT1NeaeYVoRLDkrKq2q72q9EgvgVP62l8XZddyXxVjgk/D3Bh4WnDD6X3PKEs/meB9L1oTuQKx03xEFA==
+  dependencies:
+    "@babel/runtime-corejs3" "^7.4.4"
 
 "@ianwalter/npm-short-name@^1.0.0":
   version "1.0.0"
@@ -9434,6 +9451,36 @@ webpack@^4.33.0:
   version "4.33.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.33.0.tgz#c30fc4307db432e5c5e3333aaa7c16a15a3b277e"
   integrity sha512-ggWMb0B2QUuYso6FPZKUohOgfm+Z0sVFs8WwWuSH1IAvkWs428VDNmOlAxvHGTB9Dm/qOB/qtE5cRx5y01clxw==
+  dependencies:
+    "@webassemblyjs/ast" "1.8.5"
+    "@webassemblyjs/helper-module-context" "1.8.5"
+    "@webassemblyjs/wasm-edit" "1.8.5"
+    "@webassemblyjs/wasm-parser" "1.8.5"
+    acorn "^6.0.5"
+    acorn-dynamic-import "^4.0.0"
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+    chrome-trace-event "^1.0.0"
+    enhanced-resolve "^4.1.0"
+    eslint-scope "^4.0.0"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^2.3.0"
+    loader-utils "^1.1.0"
+    memory-fs "~0.4.1"
+    micromatch "^3.1.8"
+    mkdirp "~0.5.0"
+    neo-async "^2.5.0"
+    node-libs-browser "^2.0.0"
+    schema-utils "^1.0.0"
+    tapable "^1.1.0"
+    terser-webpack-plugin "^1.1.0"
+    watchpack "^1.5.0"
+    webpack-sources "^1.3.0"
+
+webpack@^4.34.0:
+  version "4.34.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.34.0.tgz#a4c30129482f7b4ece4c0842002dedf2b56fab58"
+  integrity sha512-ry2IQy1wJjOefLe1uJLzn5tG/DdIKzQqNlIAd2L84kcaADqNvQDTBlo8UcCNyDaT5FiaB+16jhAkb63YeG3H8Q==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
