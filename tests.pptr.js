@@ -25,7 +25,7 @@ test('slide to natural height', async ({ expect }) => {
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.slide()
-  expect(p.getBoundingClientRect().height).toBe(35)
+  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
 })
 
 test('toggle', async ({ expect }) => {
@@ -34,7 +34,7 @@ test('toggle', async ({ expect }) => {
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.toggle()
-  expect(p.getBoundingClientRect().height).toBe(35)
+  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
   sled.toggle()
   expect(p.getBoundingClientRect().height).toBe(0)
 })
@@ -54,7 +54,7 @@ test('open and close', async ({ expect }) => {
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.open()
-  expect(p.getBoundingClientRect().height).toBe(35)
+  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
   sled.close()
   expect(sled.el.getBoundingClientRect().height).toBe(0)
 })

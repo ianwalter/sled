@@ -2,13 +2,11 @@
   "name": "@ianwalter/sled",
   "version": "3.0.0",
   "description": "A JavaScript micro-library for animating an element's height to create a slide effect",
-  "main": "dist/sled.js",
-  "browser": "dist/sled.js",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "lint": "eslint index.js tests.pptr.js",
+    "lint": "eslint .",
     "build:site": "NODE_ENV=production webpack --env.singleRun",
-    "pretest": "dist --babel --no-cjs",
     "test": "bff"
   },
   "keywords": [
@@ -29,17 +27,12 @@
   },
   "homepage": "https://sled.iankwalter.com",
   "files": [
-    "dist"
+    "index.js"
   ],
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.4.4"
-  },
   "devDependencies": {
     "@fullhuman/purgecss-loader": "^1.0.0",
-    "@ianwalter/babel-preset-lib": "^2.0.2",
     "@ianwalter/bff": "^6.0.1",
     "@ianwalter/bff-puppeteer": "^1.0.0",
-    "@ianwalter/dist": "^4.0.0",
     "@ianwalter/dracula": "^2.0.0",
     "@ianwalter/eslint-config": "^2.0.1",
     "@ianwalter/prism-loader": "^1.2.0",
@@ -58,11 +51,6 @@
     "webpack-dev-server": "^3.5.1"
   },
   "browserslist": "> 2%, not dead",
-  "babel": {
-    "presets": [
-      "@ianwalter/lib"
-    ]
-  },
   "bff": {
     "plugins": [
       "@ianwalter/bff-puppeteer"
