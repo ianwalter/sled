@@ -31,8 +31,8 @@
   ],
   "devDependencies": {
     "@fullhuman/purgecss-loader": "^1.0.0",
-    "@ianwalter/bff": "^6.0.1",
-    "@ianwalter/bff-puppeteer": "^1.0.0",
+    "@ianwalter/bff": "^6.3.1",
+    "@ianwalter/bff-puppeteer": "^1.2.0",
     "@ianwalter/dracula": "^2.0.0",
     "@ianwalter/eslint-config": "^2.0.1",
     "@ianwalter/prism-loader": "^1.2.0",
