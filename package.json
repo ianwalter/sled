@@ -62,6 +62,9 @@
       "@ianwalter"
     ]
   },
+  "eslintIgnore": [
+    "site/dist"
+  ],
   "renovate": {
     "extends": [
       "@ianwalter"
