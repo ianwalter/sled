@@ -36,7 +36,7 @@
     "@ianwalter/dracula": "^2.0.0",
     "@ianwalter/eslint-config": "^2.4.0",
     "@ianwalter/prism-loader": "^1.2.0",
-    "@ianwalter/release": "^2.0.0",
+    "@ianwalter/release": "^2.0.1",
     "@ianwalter/renovate-config": "^1.2.0",
     "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^2.0.2",
