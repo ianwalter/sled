@@ -10,51 +10,58 @@ function createParagraph () {
   return p
 }
 
-test('slide to given height', async ({ expect }) => {
+test('slide to given height', async t => {
   const p = createParagraph()
   p.style.height = 0
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.slide('100px')
-  expect(p.getBoundingClientRect().height).toBe(100)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBe(100)
 })
 
-test('slide to natural height', async ({ expect }) => {
+test('slide to natural height', async t => {
   const p = createParagraph()
   p.style.height = 0
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.slide()
-  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
 })
 
-test('toggle', async ({ expect }) => {
+test('toggle', async t => {
   const p = createParagraph()
   p.style.height = 0
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.toggle()
-  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
   sled.toggle()
-  expect(p.getBoundingClientRect().height).toBe(0)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBe(0)
 })
 
-test('toggle when padding and began open', async ({ expect }) => {
+test('toggle when padding and began open', async t => {
   const p = createParagraph()
   p.style.padding = '20px'
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.toggle()
-  expect(p.getBoundingClientRect().height).toBe(40)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBe(40)
 })
 
-test('open and close', async ({ expect }) => {
+test('open and close', async t => {
   const p = createParagraph()
   p.style.height = 0
   document.body.appendChild(p)
   const sled = new Sled(p)
   sled.open()
-  expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
+  await t.sleep(100)
+  t.expect(p.getBoundingClientRect().height).toBeGreaterThan(34)
   sled.close()
-  expect(sled.el.getBoundingClientRect().height).toBe(0)
+  await t.sleep(100)
+  t.expect(sled.el.getBoundingClientRect().height).toBe(0)
 })
